@@ -1,0 +1,142 @@
+body {
+    background-color: bisque;
+}
+
+h2 {
+    background: linear-gradient(to right, green, yellow);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+input {
+    border-radius: 5px;
+    border: 0.5px solid rgb(99, 99, 99);
+}
+
+button,
+h1 {
+    width: fit-content;
+}
+
+h1 {
+    position: relative;
+    font-size: 60px;
+}
+
+h1::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 15px;
+    background-color: orange;
+    height: 15px;
+    z-index: -1;
+    transition-duration: 0.5s;
+}
+
+.pacifico-regular {
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1:hover::after {
+    height: 40px;
+    transition-duration: 0.5s;
+}
+
+.inner {
+    border-top: 3px dotted;
+    border-bottom: 3px dotted;
+}
+
+td {
+    padding: 5px 0;
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+label {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.pt-sans-caption-regular {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.pt-sans-caption-bold {
+    font-family: "PT Sans Caption", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.special {
+    border-top: 1px dotted black;
+}
+
+table {
+    overflow: hidden;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(46, 46, 46, 0.5);
+    height: 100vh;
+}
+
+.first {
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+
+    transform: translate(-50%);
+    box-shadow: 0px 0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.first span {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.first span:nth-child(1) {
+    background-color: red;
+}
+
+.first span:nth-child(2) {
+    background-color: orange;
+}
+
+.first span:nth-child(3) {
+    background-color: green;
+}
+
+.br {
+    border-radius: 10px;
+}
+
+li {
+    list-style-type: none;
+}
+
+li i {
+    color: brown;
+}
+
+.first i:nth-child(1):focus .first {
+    display: none;
+}

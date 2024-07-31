@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <main >
+        <div class="container py-5 px-0 text-center">
+            <h1 class="py-2 mx-auto pacifico-regular">Bookmarker</h1>
+            <div class="mt-5 p-3 d-flex flex-column gap-4 inner">
+                <h2><i class="fa-solid fa-bookmark"></i>Bookmark your favourite site<i class="fa-solid fa-bookmark"></i>
+                </h2>
+                <div class="d-flex flex-column">
+                    <label class="me-auto py-2"><i class="fa-solid fa-book-bookmark"></i> Site name</label>
+                    <input type="text" placeholder="Bookmark Name" class="px-2 py-1 border-none form-control " oninput="Validate(Nameregex,SiteName)" id="name"></input>
+                </div>
+                <div class="d-flex flex-column">
+                    <label class="me-auto py-2"><i class="fa-solid fa-link"></i> Site URL</label>
+                    <input type="text" placeholder="Website URL" class="px-2 py-1 border-none form-control " oninput="Validate(urlregex,SiteURL)" id="URL"></input>
+                </div>
+                <button class="btn btn-danger mx-auto px-5" onclick="addBookmark()" type="button">Submit</button>
+            </div>
+            <div class="pt-4">
+                <table class="bg-white w-100 ">
+
+                    <tr class="row ">
+                        <td class="col-3 px-0">Index</td>
+                        <td class="col-3 px-0">Website name</td>
+                        <td class="col-3 px-0">Visit</td>
+                        <td class="col-3 px-0">Delete</td>
+                    </tr>
+                    <tr class="row align-items-center " id="bookmarkcontainer"></tr>
+                </table>
+            </div>
+        </div> 
+        <div id="alertcontainer">
+        </div>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
